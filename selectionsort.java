@@ -1,14 +1,22 @@
+import java.io.*;
+import java.util.*;
 class Main
 {
     public static void main(String args[])
     {
-        int[] a={4,1,6,2,7};
-    int i=0,j,min,p=0,t;
-    
-    for(i=0;i<a.length;i++)
+    int i=0,j,min,p=0,t,a[],n;
+    Scanner sc=new Scanner(System.in);
+    n=sc.nextInt();
+    a=new int[n];
+    for(i=0;i<n;i++)
+    {
+        a[i]=sc.nextInt();
+    }
+    for(i=0;i<n;i++)
     {
         min=a[i];
-        for(j=i+1;j<a.length;j++)
+        p=i;
+        for(j=i+1;j<n;j++)
         {
             if(a[j]<min)
             {
@@ -21,9 +29,9 @@ class Main
         a[p]=t;
         //System.out.println(a[i]+" "+i);
     }
-    for(i=0;i<a.length;i++)
+    for(i=0;i<n;i++)
     {
-     System.out.println(a[i]); 
+     System.out.print(a[i]+" "); 
     }
 }
 }
